@@ -1,0 +1,91 @@
+body {
+    background: linear-gradient(to right, black, blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo,
+.programming,
+.text {
+    position: absolute;
+    transition: opacity 1s, transform 1s;
+}
+
+.logo {
+    width: 250px;
+    height: 250px;
+    background: url('./imagens/paw.png') no-repeat center center;
+    background-size: contain;
+    opacity: 1;
+    transform: translateX(100vw);
+}
+
+.text {
+    width: 1000px;
+    height: auto; 
+    top: 25%;
+    left: 35%;
+    position: absolute;
+    transform: translateX(100vw);
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.programming {
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(100vw);
+}
+
+.programming .title,
+.programming .contador {
+    font-size: 3em;
+}
+
+.programming .movies {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.programming .movies img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.5s;
+}
+
+.programming .movies img:hover {
+    transform: scale(1.1);
+}
+
+.slide-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slide-out {
+    transform: translateX(-100vw);
+    opacity: 0;
+}
